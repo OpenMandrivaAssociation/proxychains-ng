@@ -1,7 +1,6 @@
 %define rname proxychains
 %define major 4
 %define libname %mklibname %rname %major
-%define develname %mklibname %rname -d 
 
 
 Name:		proxychains-ng
@@ -23,12 +22,7 @@ Requires:	libstdc++6 >= 4.5.2
 %package -n %{libname}
 Summary:	This program forces any tcp connection to follow through proxy
 Group:		System/Libraries
-Obsoletes:	%{_lib}proxychains3 < 4.8
-
-%package -n %{develname}
-Summary:	This program forces any tcp connection to follow through proxy
-Group:		Development/Other
-Requires:	%{libname} = %{EVRD}
+Obsoletes:	%{_lib}proxychains3 <= 3.1 
 
 %description
 This program allows you to use SSH, TELNET, VNC, FTP 
@@ -73,9 +67,6 @@ install -m 644 %SOURCE1 %{buildroot}/etc
 
 %files -n %{libname}
 %{_libdir}/libproxychains4.so
-
-%files -n %{develname}
-%{_libdir}/*.so
 
 %clean
 rm -rf %{buildroot}
