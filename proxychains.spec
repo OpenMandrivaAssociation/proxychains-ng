@@ -7,7 +7,7 @@ Name:		proxychains-ng
 Version:	4.8.1
 Release:	1
 Summary:	This program forces any tcp connection to follow through proxy
-License:	GPL
+License:	GPLv2
 Group:		Networking/Other 
 URL:		https://github.com/rofl0r/proxychains-ng
 Source0:	http://downloads.sourceforge.net/project/proxychains-ng/%{rname}-%{version}.tar.bz2
