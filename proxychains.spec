@@ -58,7 +58,7 @@ install -m 644 %SOURCE1 %{buildroot}/etc
 /sbin/ldconfig
 
 %files 
-%doc README AUTHORS COPYING ChangeLog
+%doc README AUTHORS COPYING
 %{_bindir}/*
 %config(noreplace) %{_sysconfdir}/*
 
