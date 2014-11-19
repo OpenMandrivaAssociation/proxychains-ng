@@ -1,2 +1,3 @@
 sources:
-  "proxychains-ng-4.8.1.tar.xz": 5ca99101c72da8ba05de8a88ca0b671755444ed9
+  proxychains-4.8.1.tar.bz2: 18e0021ae8b4629273f782633478c12c4eb253a4
+  proxychains-ng-4.8.1.tar.xz: 5ca99101c72da8ba05de8a88ca0b671755444ed9
