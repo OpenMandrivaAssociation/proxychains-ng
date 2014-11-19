@@ -36,9 +36,6 @@ and any other Internet application from behind HTTP
 (HTTPS) and SOCKS(4/5) proxy servers. This "proxifier" 
 provides proxy server support to any app.
 
-%description -n %{develname}
-Devel package for proxychains.
-
 %prep
 %setup -q -n %{rname}-%{version}
 
