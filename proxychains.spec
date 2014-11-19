@@ -72,7 +72,7 @@ install -m 644 %SOURCE1 %{buildroot}/etc
 %config(noreplace) %{_sysconfdir}/*
 
 %files -n %{libname}
-%{_libdir}/*.so.%{major}*
+%{_libdir}/libproxychains4.so
 
 %files -n %{develname}
 %{_libdir}/*.so
