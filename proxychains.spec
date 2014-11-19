@@ -1,7 +1,7 @@
-%define oname proxychains
+%define rname proxychains
 %define major 4
-%define libname %mklibname %name %major
-%define develname %mklibname %name -d 
+%define libname %mklibname %rname %major
+%define develname %mklibname %rname -d 
 
 
 Name:		proxychains-ng
@@ -11,10 +11,10 @@ Summary:	This program forces any tcp connection to follow through proxy
 License:	GPL
 Group:		Networking/Other 
 URL:		https://github.com/rofl0r/proxychains-ng
-Source0:	http://downloads.sourceforge.net/project/proxychains-ng/%{oname}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/project/proxychains-ng/%{rname}-%{version}.tar.bz2
 Source1:	proxychains.conf
 Requires:	%{libname} = %{EVRD}
-Obsoletes: 	%{name} < %version
+Obsoletes: 	%{rname} < %version
 Obsoletes: 	%{libname} < %version
 Obsoletes:	proxychains
 Requires:	glibc >= 2.12.1
@@ -46,7 +46,7 @@ provides proxy server support to any app.
 Devel package for proxychains.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{rname}-%{version}
 
 %build
 %configure2_5x --enable-shared --disable-static
@@ -79,5 +79,5 @@ install -m 644 %SOURCE1 %{buildroot}/etc
 
 %clean
 rm -rf %{buildroot}
-rm -rf $RPM_BUILD_DIR/%{name}-%{version}
+rm -rf $RPM_BUILD_DIR/%{rname}-%{version}
 
