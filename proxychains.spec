@@ -1,23 +1,21 @@
-%define rname proxychains
+%define rname proxychains-ng
 %define major 4
 %define libname %mklibname %rname %major
 
 
 Name:		proxychains-ng
-Version:	4.8.1
+Version:	4.14
 Release:	1
 Summary:	This program forces any tcp connection to follow through proxy
 License:	GPLv2
 Group:		Networking/Other 
 URL:		https://github.com/rofl0r/proxychains-ng
-Source0:	http://downloads.sourceforge.net/project/proxychains-ng/%{rname}-%{version}.tar.bz2
+Source0:	https://github.com/rofl0r/proxychains-ng/archive/v%{version}.tar.gz
 Source1:	proxychains.conf
 Requires:	%{libname} = %{EVRD}
 Obsoletes: 	%{rname} < %version
 Obsoletes: 	%{libname} < %version
 Obsoletes:	proxychains
-Requires:	glibc >= 2.12.1
-Requires:	libstdc++6 >= 4.5.2
 
 %package -n %{libname}
 Summary:	This program forces any tcp connection to follow through proxy
@@ -40,7 +38,7 @@ provides proxy server support to any app.
 %setup -q -n %{rname}-%{version}
 
 %build
-%configure2_5x --enable-shared --disable-static
+%configure --enable-shared --disable-static
 
 %make
 
@@ -64,8 +62,3 @@ install -m 644 %SOURCE1 %{buildroot}/etc
 
 %files -n %{libname}
 %{_libdir}/libproxychains4.so
-
-%clean
-rm -rf %{buildroot}
-rm -rf $RPM_BUILD_DIR/%{rname}-%{version}
-
