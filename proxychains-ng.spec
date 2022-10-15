@@ -4,7 +4,7 @@
 
 
 Name:		proxychains-ng
-Version:	4.14
+Version:	4.16
 Release:	1
 Summary:	This program forces any tcp connection to follow through proxy
 License:	GPLv2
