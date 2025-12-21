@@ -22,6 +22,11 @@ Summary:	This program forces any tcp connection to follow through proxy
 Group:		System/Libraries
 Obsoletes:	%{_lib}proxychains3 <= 3.1 
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 This program allows you to use SSH, TELNET, VNC, FTP 
 and any other Internet application from behind HTTP
